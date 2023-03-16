@@ -29,16 +29,58 @@ console.log(string);
 
 
 //Exercise 3
-let xValue = 100
-while (xValue > 0) {
-    xValue -= 0.5 //99.5
-}
-    if (xValue %2 !== 0){
-        console.log(xValue)
+const decreasing = (num) => {
+    if(num>0){
+        while(num>=0){
+            console.log(num);
+            num -= 0.5;
+        }
     }
+}
+decreasing(3)                                 
+
+console.log('\n');
+
 
 // - Write a method with a while loop to print 1 through n in square brackets. 
+const printOddNum = (numStart, numEnd) => {
+    let count = numStart;
+    let result = [];
+    while(count<=numEnd){
+        if(count%2 === 1){
+            result.push(count)
+        }
+        count ++
+    }
+    console.log(result.join());
+}
+printOddNum(1,100) 
 
 
+console.log('\n');
 
-// - Write a method with a while loop to print 1 through n in square brackets. 
+
+// - Write a method with a while loop to print 1 through n in square brackets.
+const printNum = (num) => {
+    let result = '';
+    let count = 1;
+    while(count<=num){
+        result += '[';
+        result += count;
+        result += '] ';
+        count ++;
+    }
+    console.log('Result as text ' + result);
+}
+
+ 
+//  Write a method with a while loop that computes the sum of first n positive integers:
+let sum = 0;
+ const n2 = 19;
+ let j = 0;
+ while (j <= n2) {
+    sum = sum + j ;
+    j++;
+ } 
+
+ console.log(sum);
